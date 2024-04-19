@@ -9,7 +9,7 @@ import com.facebook.react.uimanager.SimpleViewManager;
 import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.annotations.ReactProp;
 
-public class TestLibraryViewManager extends SimpleViewManager<View> {
+public class TestLibraryViewManager extends SimpleViewManager<TestLibraryView> {
   public static final String REACT_CLASS = "TestLibraryView";
 
   @Override
@@ -20,8 +20,8 @@ public class TestLibraryViewManager extends SimpleViewManager<View> {
 
   @Override
   @NonNull
-  public View createViewInstance(ThemedReactContext reactContext) {
-    return new View(reactContext);
+  public TestLibraryView createViewInstance(ThemedReactContext reactContext) {
+    return new TestLibraryView(reactContext);
   }
 
   @ReactProp(name = "color")
